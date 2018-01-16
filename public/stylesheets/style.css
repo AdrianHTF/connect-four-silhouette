@@ -29,6 +29,19 @@ body {
     font-size: 50px;
 }
 
+.gameButton {
+    margin-left: 20px;
+    border: 2px solid #000;
+    background-repeat: no-repeat;
+    background-color: rgba(0, 0, 0, 0.6);
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 30px;
+}
+
 
 #NEWSFEED {
     width: auto;

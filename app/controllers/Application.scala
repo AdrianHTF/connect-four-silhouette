@@ -49,15 +49,11 @@ class Application @Inject() (
     case _: InvalidMove => updatingMessage = "invalid move"
   }
 
-  def test = Action {
-    Ok("test")
-  }
-
   def home = silhouette.SecuredAction { implicit request =>
     Ok(views.html.home(request.identity))
   }
 
-  def index = silhouette.SecuredAction { implicit request =>
+  def index = Action {
     Ok(views.html.index("Index"))
   }
 
@@ -69,7 +65,7 @@ class Application @Inject() (
     Ok(views.html.help(""))
   }
 
-  def connectfour = Action {
+  def connectfour = silhouette.SecuredAction { implicit request =>
     Ok(views.html.connectfour.render(localGridController))
   }
 

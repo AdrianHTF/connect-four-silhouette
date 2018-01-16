@@ -111,5 +111,6 @@ function buildGrid(grid){
         innerhtml += '</tr>'
         }
     document.getElementById("grid").innerHTML = innerhtml;
+    document.getElementById("customers").style.visibility = "visible";
 }
 

@@ -30,7 +30,6 @@ GET     /connectfour           controllers.Application.connectfour()
 GET     /connectfour/:id       controllers.Application.turn(id: Int)
 GET     /news                  controllers.Application.news()
 GET     /help                  controllers.Application.help
-GET     /test                  controllers.Application.test
 
 GET		/socket				   controllers.Application.socket
 

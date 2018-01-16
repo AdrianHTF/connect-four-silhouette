@@ -5,13 +5,13 @@
 <div>
     <div>
         <div >
-            <li style="font-size: 35px" id="BUTTONNEWGAME" value="button"><a>New Game</a></li>
+            <button id="BUTTONNEWGAME" class="gameButton" value="button"><a>New Game</a></button>
 
             <div >
-                <table align="center" id="customers">
+                <table align="center" id="customers" style="visibility: hidden;">
                     @for(j <- 0 until controller.columns){
                     <td>
-                        <p><img id="@j" src='@routes.Assets.at("images/button.jpg")' width="auto" height="auto" /></p>
+                        <p><img id="@j" src='@routes.Assets.at("images/arrow.png")' width="auto" height="auto" /></p>
                     </td>
                     }
                 </table>
