@@ -1,0 +1,26 @@
+@(controller: de.htwg.se.connectfour.mvc.controller.GridController)
+@head(""){
+
+
+<div>
+    <div>
+        <div >
+            <li style="font-size: 35px" id="BUTTONNEWGAME" value="button"><a>New Game</a></li>
+
+            <div >
+                <table align="center" id="customers">
+                    @for(j <- 0 until controller.columns){
+                    <td>
+                        <p><img id="@j" src='@routes.Assets.at("images/button.jpg")' width="auto" height="auto" /></p>
+                    </td>
+                    }
+                </table>
+                <table align="center" id="grid">
+
+                </table>
+            </div>
+            <p>&nbsp;</p>
+        </div>
+    </div>
+</div>
+}

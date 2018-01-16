@@ -1,0 +1,51 @@
+@(title: String)(content: Html)
+
+<html lang="en">
+    <head>
+
+        <meta http-equiv="Content-Security-Policy" content="default-src * 'unsafe-inline' 'unsafe-eval'" >
+            <!-- Bootstrap CSS -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+            <!-- Stylesheet -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css">
+        <link rel="stylesheet" media="screen" href='@routes.Assets.at("stylesheets/style.css")'>
+
+
+            <!-- Javascript -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+        <script src='@routes.Assets.at("javascripts/connectfour.js")'></script>
+        <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/1.1.3/sweetalert.min.css">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/1.1.3/sweetalert.min.js"></script>
+
+        <title>Connect-Four</title>
+        <p>&nbsp;</p>
+        <table id="MENU">
+            <tr>
+                <th>
+                    <ul>
+                        <li style="margin-left: 10px; font-size: 35px"><a href="/">Home</a></li>
+                        <li style="font-size: 35px"><a href="/news">News</a></li>
+                        <li style="font-size: 35px"><a href="/help">Help</a></li>
+                        <li style="font-size: 35px" ><a href="/connectfour">Game</a></li>
+                    </ul>
+                </th>
+            </tr>
+        </table>
+        <p>&nbsp;</p>
+    </head>
+    <body>
+        <div>@content</div>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
+    </body>
+
+
+    <table id="BOTTOM">
+        <tr align="center">
+            <th>Connect-Four</th>
+        </tr>
+    </table>
+</html>

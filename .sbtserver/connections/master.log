@@ -1,0 +1,7 @@
+New log file opened at Tue Jan 16 18:06:59 CET 2018 by 109816@Kuba--PC
+Taking next connection to: 55227
+New client attempting to connect on port: 55228-55227
+  Address = /10.97.112.108:55227
+This client on port 55228 has uuid d40a6b78-b336-49a3-b74f-0b095f0d4804 configName play-fork-run humanReadableName Play Fork Run protocolVersion 1 featureTags Vector()
+Connected Clients: play-fork-run-d40a6b78-b336-49a3-b74f-0b095f0d4804
+Taking next connection to: 55227
