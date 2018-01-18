@@ -1,4 +1,5 @@
 var socket;
+var grid;
 
 $(function(){
 
@@ -10,18 +11,15 @@ $(function(){
             message('Socket Status: '+socket.readyState+' (open)');
             }
         socket.onmessage = function(message){
-            if (message.data == "update"){
-                location.reload();
-                console.log(message.data)
-            }
-            if(message.data.toString().startsWith("Player")){
+
+            if(message.data.toString().startsWith("Player") || message.data.toString().startsWith("draw")){
                 showDialog(message.data);
             }
             else{
                 console.log(message.data)
-                var grid = JSON.parse(message.data);
-                buildGrid(grid);
+                grid = JSON.parse(message.data);
             }
+            buildGrid(grid);
 
         }
         socket.onerror = function(){

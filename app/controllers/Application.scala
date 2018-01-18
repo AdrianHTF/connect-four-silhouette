@@ -98,8 +98,6 @@ class Application @Inject() (
           startNewGame()
           sendJson()
         } else if (msg.toInt >= 0 && msg.toInt <= 6) {
-          println(msg)
-          println(updatingMessage)
           players.applyTurn(msg.toInt)
           sendJson()
         }
@@ -107,8 +105,14 @@ class Application @Inject() (
           out ! updatingMessage
         }
         if (updatingMessage == "column is filled") {
+          out ! updatingMessage
           updatingMessage = "update"
         }
+        if (updatingMessage == "draw") {
+          out ! updatingMessage
+          updatingMessage = "update"
+        }
+
     }
     def sendJson() = {
       var listBuffer = new ListBuffer[String]()
